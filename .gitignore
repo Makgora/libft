@@ -1,0 +1,14 @@
+#Object files
+*.o
+
+#Precompiled headers
+*.gch
+
+#Libraries
+*.a
+
+#Pdf files
+*.pdf
+
+#Scripts
+*.sh
