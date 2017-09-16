@@ -12,3 +12,6 @@
 
 #Scripts
 *.sh
+
+#Other files
+*.txt

@@ -2,13 +2,13 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dst_size)
 {
-	size_t	dst_len;
-	size_t	dst_left;
-	char	*p_dst;
-	char	*p_src;
+	size_t		dst_len;
+	size_t		dst_left;
+	char		*p_dst;
+	const char	*p_src;
 	
 	p_dst = dst;
-	p_src = (char *)src;
+	p_src = (const char *)src;
 	dst_left = dst_size;
 	//Calcul de la taille (écrite) de dst
 	while (*p_dst != '\0' && dst_left != 0)
