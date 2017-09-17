@@ -17,17 +17,19 @@ CFILES	=	ft_memset.c	\
 		ft_strchr.c	\
 		ft_strrchr.c	\
 		ft_strstr.c	\
-#		ft_strnstr.c	\
-#		ft_strcmp.c	\
-#		ft_strncmp.c	\
-#		ft_atoi.c	\
-#		ft_isalpha.c	\
-#		ft_isdigit.c	\
-#		ft_isalnum.c	\
-#		ft_isascii.c	\
-#		ft_isprint.c	\
-#		ft_toupper.c	\
-#		ft_tolower.c	\
+		ft_strnstr.c	\
+		ft_strcmp.c	\
+		ft_strncmp.c	\
+		ft_atoi.c	\
+		ft_isalpha.c	\
+		ft_isdigit.c	\
+		ft_isalnum.c	\
+		ft_isascii.c	\
+		ft_isprint.c	\
+		ft_isupper.c	\
+		ft_islower.c	\
+		ft_toupper.c	\
+		ft_tolower.c	\
 
 OFILES	=	$(CFILES:.c=.o)	\
 		libft.h.gch
