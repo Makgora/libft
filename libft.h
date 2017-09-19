@@ -1,6 +1,8 @@
 #ifndef LIBFT_H
  #define LIBFT_H
 
+ #include <stdio.h> //DELETE
+
  #include <unistd.h>
  #include <stdlib.h>
  #include <string.h>
@@ -24,6 +26,7 @@
  void	*ft_memset(void *str, int c, size_t n);
  char	*ft_strcat(char *dest, const char *src);
  char	*ft_strchr(const char *s, int c);
+ int	ft_strclen(const char *s, char c);
  void	ft_strclr(char *s);
  int	ft_strcmp(const char *s1, const char *s2);
  char	*ft_strcpy(char *dest, const char *src);
@@ -40,13 +43,16 @@
  char	*ft_strncat(char *dest, const char *src, size_t n);
  int	ft_strncmp(const char *s1, const char *s2, size_t n);
  char	*ft_strncpy(char *dest, const char *src, size_t n);
+ char	*ft_strndup(const char *s, size_t n);
  int	ft_strnequ(char *s1, char *s2, size_t n);
  char	*ft_strnew(size_t size);
  char	*ft_strnstr(const char *big, const char *little, size_t len);
  char	*ft_strrchr(const char *s, int c);
+ char	**ft_strsplit(char const *s, char c);
  char	*ft_strstr(const char *haystack, const char *needle);
  char	*ft_strsub(char const *s, unsigned int start, size_t len);
  char	*ft_strtrim(char const *s);
+ int	ft_strwcount(char const *s, char c);
  int	ft_tolower(int c);
  int	ft_toupper(int c);
 

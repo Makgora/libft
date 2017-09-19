@@ -43,7 +43,10 @@ CFILES	=	ft_memset.c	\
 		ft_strsub.c	\
 		ft_strjoin.c	\
 		ft_strtrim.c	\
-
+		ft_strsplit.c	\
+		ft_strwcount.c	\
+		ft_strclen.c	\
+		ft_strndup.c	\
 
 OFILES	=	$(CFILES:.c=.o)	\
 		libft.h.gch

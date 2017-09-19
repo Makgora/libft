@@ -13,5 +13,9 @@
 #Scripts
 *.sh
 
+#Compiled files
+*.out
+
 #Other files
 *.txt
+main.c
