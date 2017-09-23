@@ -16,6 +16,7 @@
  int	ft_islower(int c);
  int	ft_isprint(int c);
  int	ft_isupper(int c);
+ char	*ft_itoa(int n);
  void	*ft_memalloc(size_t size);
  void	*ft_memccpy(void *dest, const void *src, int c, size_t n);
  void	*ft_memchr(const void *s, int c, size_t n);
@@ -24,6 +25,10 @@
  void	ft_memdel(void **ap);
  void	*ft_memmove(void *dest, const void *src, size_t n);
  void	*ft_memset(void *str, int c, size_t n);
+ void	ft_putchar(char c);
+ void	ft_putendl(char const *s);
+ void	ft_putnbr(int n);
+ void	ft_putstr(char const *s);
  char	*ft_strcat(char *dest, const char *src);
  char	*ft_strchr(const char *s, int c);
  int	ft_strclen(const char *s, char c);

@@ -47,6 +47,12 @@ CFILES	=	ft_memset.c	\
 		ft_strwcount.c	\
 		ft_strclen.c	\
 		ft_strndup.c	\
+		ft_itoa.c	\
+		ft_putchar.c	\
+		ft_putstr.c	\
+		ft_putendl.c	\
+		ft_putnbr.c	\
+
 
 OFILES	=	$(CFILES:.c=.o)	\
 		libft.h.gch
