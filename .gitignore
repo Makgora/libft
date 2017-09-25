@@ -11,7 +11,7 @@
 *.pdf
 
 #Scripts
-*.sh
+#*.sh
 
 #Compiled files
 *.out
