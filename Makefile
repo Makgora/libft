@@ -66,6 +66,10 @@ FLAGS	=	-Wall -Werror -Wextra
 
 all: $(NAME)
 
+so:
+	$(CC) -c $(FLAGS) -fpic $(CFILES)
+	$(CC) -shared -o libft.so $(OFILES)
+
 $(NAME):
 	@echo
 	@echo ">> Compilation CFILES <<"
