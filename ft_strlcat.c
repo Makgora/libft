@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tparand <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/11/10 16:45:20 by tparand           #+#    #+#             */
+/*   Updated: 2017/11/10 17:36:01 by tparand          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dst_size)
@@ -6,23 +18,16 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dst_size)
 	size_t		dst_left;
 	char		*p_dst;
 	const char	*p_src;
-	
+
 	p_dst = dst;
 	p_src = (const char *)src;
 	dst_left = dst_size;
-	//Calcul de la taille (écrite) de dst
-	while (*p_dst != '\0' && dst_left != 0)
-	{
-		p_dst++;
-		dst_left--;
-	}
+	while (*p_dst++ != '\0' && dst_left-- != 0)
+		;
 	dst_len = p_dst - dst;
-	//Calcul de la taille (libre) de dst
 	dst_left = dst_size - dst_len - 1;
-	//Si dst_left = 0, return direct la taille dst + taille de src
 	if (dst_left == 0)
 		return (dst_len + ft_strlen(src));
-	//Si il reste de la place, src dans dst, on va au bout de src
 	while (*p_src != '\0')
 	{
 		if (dst_left > 1)
@@ -33,7 +38,5 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dst_size)
 		p_src++;
 	}
 	*p_dst = '\0';
-	//Return la taille de dst + la taille de src (sans le null final)
 	return (dst_len + (p_src - src));
-
 }

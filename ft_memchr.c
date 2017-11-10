@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tparand <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/11/10 16:42:36 by tparand           #+#    #+#             */
+/*   Updated: 2017/11/10 19:06:14 by tparand          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
@@ -5,11 +17,10 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	char	*p_s;
 
 	p_s = (char *)s;
-	while (*p_s != c && n > 0)
+	while (n > 0 && *p_s != c)
 	{
 		p_s++;
 		n--;
 	}
 	return (n > 0 ? p_s : NULL);
 }
-

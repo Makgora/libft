@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tparand <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/11/10 16:43:09 by tparand           #+#    #+#             */
+/*   Updated: 2017/11/10 17:30:30 by tparand          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-void	putnbr_fd_aux(long int n, int fd)
+static void	putnbr_fd_aux(long int n, int fd)
 {
 	if (n < 0)
 	{
@@ -14,7 +26,7 @@ void	putnbr_fd_aux(long int n, int fd)
 	}
 }
 
-void	ft_putnbr_fd(int n, int fd)
+void		ft_putnbr_fd(int n, int fd)
 {
 	if (n == 0)
 		ft_putchar_fd('0', fd);

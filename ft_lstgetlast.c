@@ -1,19 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striter.c                                       :+:      :+:    :+:   */
+/*   ft_lstgetlast.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tparand <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/10 16:45:12 by tparand           #+#    #+#             */
-/*   Updated: 2017/11/10 16:50:14 by tparand          ###   ########.fr       */
+/*   Created: 2017/11/10 15:33:08 by tparand           #+#    #+#             */
+/*   Updated: 2017/11/10 15:33:11 by tparand          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striter(char *s, void (*f)(char *))
+t_list	*ft_lstgetlast(t_list **alst)
 {
-	while (*s != '\0')
-		f(s++);
+	while ((*alst)->next != NULL)
+		*alst = (*alst)->next;
+	return (*alst);
 }
