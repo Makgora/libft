@@ -14,16 +14,19 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dst_size)
 {
-	size_t		dst_len;
-	size_t		dst_left;
 	char		*p_dst;
 	const char	*p_src;
+	size_t		dst_len;
+	size_t		dst_left;
 
 	p_dst = dst;
-	p_src = (const char *)src;
+	p_src = src;
 	dst_left = dst_size;
-	while (*p_dst++ != '\0' && dst_left-- != 0)
-		;
+	while (dst_left > 0 && *p_dst != '\0')
+	{
+		dst_left--;
+		p_dst++;
+	}
 	dst_len = p_dst - dst;
 	dst_left = dst_size - dst_len - 1;
 	if (dst_left == 0)
@@ -39,4 +42,16 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dst_size)
 	}
 	*p_dst = '\0';
 	return (dst_len + (p_src - src));
+}
+
+int	main(void)
+{
+   char buf[10];
+
+   bzero(buf, 10);
+   strcpy(buf, "abc");
+   ft_strlcat(buf, "abcdefghijklmnop", 10);
+   printf("%s\n", buf);
+ 
+   return 0;
 }
