@@ -6,7 +6,7 @@
 /*   By: tparand <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 16:46:35 by tparand           #+#    #+#             */
-/*   Updated: 2017/11/10 17:04:48 by tparand          ###   ########.fr       */
+/*   Updated: 2017/11/13 23:31:50 by tparand          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ char		**ft_strsplit(char const *s, char c)
 	int		i;
 	size_t	word_len;
 
+	if (s == NULL)
+		return (NULL);
 	nb_words = ft_strwcount(s, c);
 	words_arr = (char **)malloc(sizeof(char **) * (nb_words + 1));
 	if (!words_arr)

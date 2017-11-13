@@ -6,7 +6,7 @@
 /*   By: tparand <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 16:46:38 by tparand           #+#    #+#             */
-/*   Updated: 2017/11/10 16:50:47 by tparand          ###   ########.fr       */
+/*   Updated: 2017/11/13 20:51:19 by tparand          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,15 +23,14 @@ char	*ft_strstr(const char *haystack, const char *needle)
 	{
 		p_haystack = haystack;
 		p_needle = needle;
-		while (*p_needle != '\0' && *p_needle == *p_haystack)
+		while (*p_haystack != '\0' && *p_needle == *p_haystack)
 		{
 			p_needle++;
 			p_haystack++;
 		}
 		if (*p_needle == '\0')
 			return ((char *)haystack);
-		while (p_haystack - haystack >= 0)
-			haystack++;
+		haystack++;
 	}
 	return (NULL);
 }

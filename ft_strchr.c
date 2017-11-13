@@ -6,7 +6,7 @@
 /*   By: tparand <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 16:44:08 by tparand           #+#    #+#             */
-/*   Updated: 2017/11/10 16:49:56 by tparand          ###   ########.fr       */
+/*   Updated: 2017/11/13 18:40:27 by tparand          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,5 @@ char	*ft_strchr(const char *s, int c)
 	p_s = (const char *)s;
 	while (*p_s != c && *p_s != '\0')
 		p_s++;
-	return (*p_s == '\0' ? NULL : (char *)p_s);
+	return (*p_s == '\0' && c != '\0' ? NULL : (char *)p_s);
 }

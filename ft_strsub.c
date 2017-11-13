@@ -6,7 +6,7 @@
 /*   By: tparand <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 16:46:40 by tparand           #+#    #+#             */
-/*   Updated: 2017/11/10 16:50:48 by tparand          ###   ########.fr       */
+/*   Updated: 2017/11/13 23:33:13 by tparand          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
 	char	*new;
 
+	if (s == NULL)
+		return (NULL);
 	new = ft_strnew(len);
 	if (!new)
 		return (NULL);
