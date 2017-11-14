@@ -21,5 +21,5 @@ int	ft_strclen(const char *s, char c)
 		s_len++;
 	if (c == '\0' && s[s_len] == '\0')
 		return (s_len);
-	return (s[s_len] == '\0' ? 0 : s_len);
+	return (s[s_len] != '\0' && s[s_len] == c ? 0 : s_len);
 }
