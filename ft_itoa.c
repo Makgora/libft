@@ -6,7 +6,7 @@
 /*   By: tparand <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 16:41:48 by tparand           #+#    #+#             */
-/*   Updated: 2017/11/10 18:30:56 by tparand          ###   ########.fr       */
+/*   Updated: 2017/11/14 17:18:55 by tparand          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,4 +50,12 @@ char			*ft_itoa(int n)
 		str_len--;
 	}
 	return (str);
+}
+
+int main(int argc, const char *argv[])
+{
+	if (argc == 2)
+		printf("|%d| -- |%s|\n", ft_atoi(argv[1]), ft_itoa(ft_atoi(argv[1])));
+	char *str = "-623 ; 0 ; -0 ; NULL ; 2147483647 ; 2143647648 ; -2147483647";
+	return (0);
 }
