@@ -29,6 +29,7 @@ char		**ft_strsplit(char const *s, char c)
 	if (s == NULL)
 		return (NULL);
 	nb_words = ft_strwcount(s, c);
+	printf("%d\n", nb_words);
 	words_arr = (char **)malloc(sizeof(char **) * (nb_words + 1));
 	if (!words_arr)
 		return (NULL);
@@ -36,10 +37,30 @@ char		**ft_strsplit(char const *s, char c)
 	while (i < nb_words)
 	{
 		s = get_next_word(s, c);
+		printf("next:%s\n", s);
 		word_len = ft_strclen(s, c);
+		printf("wl:%zu\n", word_len);
 		words_arr[i] = ft_strndup(s, word_len);
 		s += word_len;
 		i++;
 	}
 	return (words_arr);
+}
+
+void	print(char **tab)
+{
+	int	i;
+
+	i = 0;
+	while (tab[i] != NULL)
+	{
+		ft_putstr(tab[i]);
+		i++;
+	}
+}
+int	main(void)
+{
+	print(ft_strsplit("test de la fonction  i   a", ' '));
+	printf("\n");
+	return (0);
 }
