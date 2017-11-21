@@ -6,7 +6,7 @@
 /*   By: tparand <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 16:46:26 by tparand           #+#    #+#             */
-/*   Updated: 2017/11/10 17:03:47 by tparand          ###   ########.fr       */
+/*   Updated: 2017/11/21 19:09:20 by tparand          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,13 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		p_big = big;
 		p_little = little;
 		len_bis = len;
-		while (*p_little != '\0' && *p_little == *p_big && len_bis-- > 0)
+		while (len_bis > 0 && *p_little != '\0' && *p_little == *p_big)
 		{
 			p_little++;
 			p_big++;
+			len_bis--;
 		}
+		printf("p_big: %s, p_little: %s, len: %zu\n", p_big, p_little, len_bis);
 		if (*p_little == '\0')
 			return ((char *)big);
 		while (p_big - big >= 0 && len > 0)
@@ -39,4 +41,14 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		}
 	}
 	return (NULL);
+}
+
+int main(int argc, const char *argv[])
+{
+	(void)argc;
+	(void)argv;
+
+	char buf2[] = "ozarabozaraboze123";
+	printf("|%s| - |ozaraboze123|\n", ft_strnstr(buf2, "ozaraboze", 15));
+	return 0;
 }

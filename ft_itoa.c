@@ -6,20 +6,30 @@
 /*   By: tparand <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 16:41:48 by tparand           #+#    #+#             */
-/*   Updated: 2017/11/14 17:18:55 by tparand          ###   ########.fr       */
+/*   Updated: 2017/11/21 12:47:08 by tparand          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	get_length(long int nb)
+static size_t	get_length(long int *nb)
 {
-	size_t	size;
+	size_t		size;
+	long int	n;
 
 	size = 0;
-	while (nb > 0)
+	n = *nb;
+	if (n == 0)
+		return (1);
+	if (n < 0)
 	{
-		nb /= 10;
+		*nb *= -1;
+		n *= -1;
+		size++;
+	}
+	while (n > 0)
+	{
+		n /= 10;
 		size++;
 	}
 	return (size);
@@ -32,17 +42,13 @@ char			*ft_itoa(int n)
 	long int	nb;
 
 	nb = (long int)n;
-	str_len = get_length(nb);
-	if (nb < 0)
-	{
-		nb *= -1;
-		str = ft_strnew(str_len + 1);
+	str_len = get_length(&nb);
+	str = ft_strnew(str_len);
+	if (!str)
+		return (NULL);
+	*str = '0';
+	if (n < 0)
 		*str = '-';
-	}
-	else
-		str = ft_strnew(str_len);
-	if (nb == 0)
-		*str = '0';
 	while (nb > 0)
 	{
 		str[str_len - 1] = nb % 10 + '0';
@@ -50,12 +56,4 @@ char			*ft_itoa(int n)
 		str_len--;
 	}
 	return (str);
-}
-
-int main(int argc, const char *argv[])
-{
-	if (argc == 2)
-		printf("|%d| -- |%s|\n", ft_atoi(argv[1]), ft_itoa(ft_atoi(argv[1])));
-	char *str = "-623 ; 0 ; -0 ; NULL ; 2147483647 ; 2143647648 ; -2147483647";
-	return (0);
 }
