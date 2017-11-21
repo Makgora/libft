@@ -210,13 +210,7 @@ ft_strnequ:    [OK] [OK] [OK] [OK] [M-^_M-^[° ]
 ft_strsub:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [M-^_M-^[° ] 
 ft_strjoin:    [OK] [OK] [OK] [OK] [OK] [M-^_M-^R• ] 
 ft_strtrim:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [M-^_M-^[° ] 
-ft_strsplit:   [CRASH] [OK] [FAILED] [OK] [OK] [CRASH] [CRASH] [OK] [CRASH] [M-^_M-^[° ] 
-[crash]: your strsplit does not work with basic input
-[fail]: your strsplit does not work with one word
-[crash]: your strsplit does not work with full string
-[crash]: your strsplit does not work with basic input
-[crash]: your strsplit does not work with basic input
-
+ft_strsplit:   [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [M-^_M-^[° ] 
 ft_itoa:       [FAILED] [OK] [OK] [FAILED] [FAILED] [CRASH] [KO] [KO] [OK] 
 [fail]: your itoa does not work with basic input
 [fail]: your itoa does not work with min int
