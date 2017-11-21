@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int		ft_lstisempty(t_list *alst)
+int		ft_lstislast(t_list *alst)
 {
-	return (alst == NULL ? 1 : 0);
+	return (alst->next == NULL ? 1 : 0);
 }

@@ -15,6 +15,7 @@
 t_list		*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
 	t_list	*new;
+<<<<<<< HEAD
 	t_list	*p_new;
 
 	new = f(lst);
@@ -28,4 +29,12 @@ t_list		*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 		p_new = p_new->next;
 	}
 	return (new);
+=======
+	if (lst == NULL)
+		return (NULL);
+	new = ft_lstnew(NULL, 0);
+	while (ft_lstislast(lst) != 1)
+
+	return (f(lst));
+>>>>>>> e331ae0223bac5d33cc5c8950dcfd7efbfa03eda
 }
