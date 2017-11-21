@@ -6,7 +6,7 @@
 /*   By: tparand <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 16:46:26 by tparand           #+#    #+#             */
-/*   Updated: 2017/11/21 19:09:20 by tparand          ###   ########.fr       */
+/*   Updated: 2017/11/21 19:13:16 by tparand          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,13 +42,14 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (NULL);
 }
-
-int main(int argc, const char *argv[])
-{
-	(void)argc;
-	(void)argv;
-
-	char buf2[] = "ozarabozaraboze123";
-	printf("|%s| - |ozaraboze123|\n", ft_strnstr(buf2, "ozaraboze", 15));
-	return 0;
-}
+/*
+**int main(int argc, const char *argv[])
+**{
+**	(void)argc;
+**	(void)argv;
+**
+**	char buf2[] = "ozarabozaraboze123";
+**	printf("|%s| - |ozaraboze123|\n", ft_strnstr(buf2, "ozaraboze", 15));
+**	return 0;
+**}
+*/

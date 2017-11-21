@@ -6,7 +6,7 @@
 #    By: tparand <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/10 16:46:58 by tparand           #+#    #+#              #
-#    Updated: 2017/11/10 17:24:29 by tparand          ###   ########.fr        #
+#    Updated: 2017/11/21 19:17:27 by tparand          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,6 @@ SRCS	=	ft_atoi.c		\
 			ft_lstdel.c		\
 			ft_lstdelone.c	\
 			ft_lstgetlast.c	\
-			ft_lstisempty.c	\
 			ft_lstiter.c	\
 			ft_lstmap.c		\
 			ft_lstnew.c		\
