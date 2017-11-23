@@ -223,8 +223,10 @@ This is a list of my projects that use Libft extensively:
 
 * [get_next_line](https://github.com/Makgora/get_next_line)
 
-Thx to R4meau for this Readme.
+Thx to [R4meau][4] and [moannuo][5] for this Readme.
 
 [1]: https://github.com/Makgora/libft/blob/master/libft.pdf "Libft PDF"
 [2]: http://www.42.fr/ "42 FR"
 [3]: https://github.com/Makgora/libft/wiki
+[4]: https://github.com/R4meau
+[5]: https://github.com/moannuo 
