@@ -4,6 +4,10 @@ My implementation of some of the Standard C Library functions including some add
 ### SUMMARY
 * [What is libft?](#what-is-libft)
 * [What's in it?](#whats-in-it)
+	1. [Part 1](#partie-1)
+	2. [Part 2](#partie-2)
+	3. [Bonus part](#partie-bonus)
+	3. [Personal Functions](#fonctions-perso)
 * [How does it work?](#how-does-it-work)
 * [How do I use the library?](#how-do-i-use-the-library)
 
@@ -184,6 +188,8 @@ maillon et celle de tous ses successeurs l’un apres l’autre avec `del` et `f
 
 ##### ft_lstmap
 > Parcourt la liste lst en appliquant à chaque maillon la fonction f et cree une nouvelle liste “fraiche” avec `malloc(3)` resultant des applications successives. Si une allocation echoue, la fonction renvoie `NULL`.
+
+#### Partie bonus
 
 ### How does it work?
 
