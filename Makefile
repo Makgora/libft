@@ -87,14 +87,15 @@ CC	=	gcc
 CFLAGS	=	-c -Wall -Werror -Wextra
 
 all: $(NAME)
+	@echo "\033[1;34mLibft\t\t\033[1;33mCompilation\t\033[0;32m[OK]\033[0m"
+	@echo
 
 $(NAME): $(OBJS)
-	@echo
-	@echo ">> Making LIBFT.A <<"
+	@echo "\033[1;34mLibft\t\t\033[1;33mMaking lib\t\033[0;32m[OK]\033[0m"
 	@echo
 	ar rc $@ $(OBJS)
 	@echo
-	@echo ">> Indexing LIBFT.A <<"
+	@echo "\033[1;34mLibft\t\t\033[1;33mIndexing lib\t\033[0;32m[OK]\033[0m"
 	@echo
 	ranlib $@
 	@echo
@@ -104,14 +105,14 @@ $(NAME): $(OBJS)
 
 clean:
 	@echo
-	@echo ">> Cleaning OFILES <<"
+	@echo "\033[1;34mLibft\t\t\033[1;33mCleaning obj\t\033[0;32m[OK]\033[0m"
 	@echo
 	rm -Rf $(OBJS)
 	@echo
 
 fclean: clean
 	@echo
-	@echo ">> Cleaning LIBFT.A <<"
+	@echo "\033[1;34mLibft\t\t\033[1;33mCleaning lib\t\033[0;32m[OK]\033[0m"echo
 	@echo
 	rm -Rf $(NAME)
 	@echo
