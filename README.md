@@ -12,7 +12,7 @@ My implementation of some of the Standard C Library functions including some add
 * [How do I use the library?](#how-do-i-use-the-library)
 
 ### What is libft?
-[Libft][1] is an individual project at [42][2] that requires us to re-create some standard C library functions including some additional ones that can be used later to build a library of useful functions for the rest of the program.
+Libft[fr][0][en][1] is an individual project at [42][2] that requires us to re-create some standard C library functions including some additional ones that can be used later to build a library of useful functions for the rest of the program.
 
 Disclaimer: *Reinventing the wheel is bad, 42 makes us do this just so we can have a deeper understanding of data structures and basic algorithms. At 42 we're not allowed to use some standard libraries on our projects, so we have to keep growing this library with our own functions as we go farther in the program.*
 
@@ -225,7 +225,8 @@ This is a list of my projects that use Libft extensively:
 
 Thx to [R4meau][4] and [moannuo][5] for this Readme.
 
-[1]: https://github.com/Makgora/libft/blob/master/libft.pdf "Libft PDF"
+[0]: https://github.com/Makgora/libft/blob/master/libft.fr.pdf "Libft PDF 'fr'"
+[1]: https://github.com/Makgora/libft/blob/master/libft.en.pdf "Libft PDF 'en'"
 [2]: http://www.42.fr/ "42 FR"
 [3]: https://github.com/Makgora/libft/wiki
 [4]: https://github.com/R4meau
