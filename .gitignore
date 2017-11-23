@@ -8,7 +8,7 @@
 *.a
 
 #Pdf files
-*.pdf
+#*.pdf
 
 #Scripts
 #*.sh
