@@ -27,33 +27,33 @@ As you can see from the [Project instructions][1] [(french)][0], there are 4 sec
 
 Libc functions | Additional functions | Bonus Functions | Personal Functions
 :----------- | :-----------: | :-----------: | -----------:
-memset		| ft_memalloc		| ft_lstnew		|  
-bzero		| ft_memdel		| ft_lstdelone		|  
-memcpy		| ft_strnew		| ft_lstdel		|     
-memccpy		| ft_strdel		| ft_lstadd		|     
-memmove		| ft_strclr		| ft_lstiter		|     
-memchr		| ft_striter		| ft_lstmap		| 
-memcmp		| ft_striteri		|			| 
-strlen		| ft_strmap		|			| 
-strdup		| ft_strmapi		|			| 
-strcpy		| ft_strequ		|			| 
-strncpy		| ft_strnequ		|			| 
-strcat		| ft_strsub		| 			| 
-strlcat		| ft_strjoin		| 			| 
-strchr		| ft_strtrim		| 			| 
-strrchr		| ft_strsplit		| 			| 
-strstr		| ft_itoa		| 			| 
-strnstr		| ft_putchar		| 			| 
-strcmp		| ft_putstr		| 			| 
-strncmp		| ft_putendl		| 			| 
-atoi		| ft_putnbr		| 			| 
-isalpha		| ft_putchar_fd		| 			| 
-isdigit		| ft_putstr_fd		| 			| 
-isalnum		| ft_putendl_fd		| 			| 
-isascii		| ft_putnbr_fd		| 			| 
-isprint		|			| 			| 
-toupper		|			| 			| 
-tolower		| 			| 			| 
+memset		| ft_memalloc	| ft_lstnew		| ft_factorial
+bzero		| ft_memdel		| ft_lstdelone	| ft_islower
+memcpy		| ft_strnew		| ft_lstdel		| ft_isupper
+memccpy		| ft_strdel		| ft_lstadd		| ft_lstaddend
+memmove		| ft_strclr		| ft_lstiter	| ft_lstgetlast
+memchr		| ft_striter	| ft_lstmap		| ft_lstislast
+memcmp		| ft_striteri	|				| ft_strclen
+strlen		| ft_strmap		|				| ft_strndup
+strdup		| ft_strmapi	|				| ft_strwcount
+strcpy		| ft_strequ		|				| ft_swap
+strncpy		| ft_strnequ	|				| 
+strcat		| ft_strsub		|				| 
+strlcat		| ft_strjoin	|				| 
+strchr		| ft_strtrim	|				| 
+strrchr		| ft_strsplit	|				| 
+strstr		| ft_itoa		|				| 
+strnstr		| ft_putchar	|				| 
+strcmp		| ft_putstr		|				| 
+strncmp		| ft_putendl	|				| 
+atoi		| ft_putnbr		|				| 
+isalpha		| ft_putchar_fd	|				| 
+isdigit		| ft_putstr_fd	|				| 
+isalnum		| ft_putendl_fd	|				| 
+isascii		| ft_putnbr_fd	|				| 
+isprint		|				|				| 
+toupper		|				|				| 
+tolower		|				|				| 
 
 
 Notes:
@@ -190,7 +190,33 @@ maillon et celle de tous ses successeurs l’un apres l’autre avec `del` et `f
 ##### ft_lstmap
 > Parcourt la liste lst en appliquant à chaque maillon la fonction f et cree une nouvelle liste “fraiche” avec `malloc(3)` resultant des applications successives. Si une allocation echoue, la fonction renvoie `NULL`.
 
-#### Partie bonus
+#### Fonctions perso
+#### ft_factorial
+> Prend un int en parametre et return la factoriel de ce nombre.
+
+#### ft_islower
+> Prend une string en imput et return 1 si tous les caracteres sont en miniscule. 141 >= c <= 172
+
+#### ft_isupper
+> Prend une string en imput et return 1 si tous les caracteres sont en majuscule. 101 >= c <= 132
+
+#### ft_lstaddend
+> Prend en parametre un pointeur sur une liste ainsi qu'un maillon de liste à ajouter à la fin de la liste. Return `void`.
+
+#### ft_lstgetlast
+> Prend en parametre un pointeur sur liste et return le dernier maillon de la liste (qui n'est pas NULL).
+
+#### ft_lstislast
+> Prend en parametre un maillon d'une liste et return 1 si le maillon est le dernier (non NULL) de la liste, 0 sinon.
+
+#### ft_strclen
+> Prend en parametre une string ainsi qu'un caractere. ft_strclen calcule la taille de la chaine jusqu'au caractere c, ou la taille complete si le caractere n'est pas trouvé.
+
+#### ft_strndup
+> Alloue avec `malloc(3)` suffisament de memoire pour copier au plus `n` caractere de la string passée en parametre. Termine la chaine par `'\0'`. Return `NULL` si il n'y a pas suffisament de memoire.
+
+#### ft_strwcount
+> Return le nombre de "mots" que contient la string passée en parametre delimites par le caractere `c`.
 
 ### How does it work?
 
