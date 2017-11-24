@@ -6,7 +6,7 @@
 #    By: tparand <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/10 16:46:58 by tparand           #+#    #+#              #
-#    Updated: 2017/11/24 10:56:49 by tparand          ###   ########.fr        #
+#    Updated: 2017/11/24 11:34:20 by tparand          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -81,8 +81,8 @@ SRCS	=	ft_atoi.c		\
 			ft_toupper.c
 
 OBJS	=	$(SRCS:.c=.o)
-H	=	./libft.h
-CC	=	gcc
+H		=	./libft.h
+CC		=	gcc
 CFLAGS	=	-c -Wall -Werror -Wextra
 
 all: $(NAME)
@@ -110,7 +110,7 @@ clean:
 
 fclean: clean
 	@echo
-	@echo "\033[1;34mLibft\t\t\033[1;33mCleaning lib\t\033[0;32m[OK]\033[0m"echo
+	@echo "\033[1;34mLibft\t\t\033[1;33mCleaning lib\t\033[0;32m[OK]\033[0m"
 	@echo
 	rm -Rf $(NAME)
 	@echo
