@@ -18,7 +18,7 @@ Disclaimer: *Reinventing the wheel is bad, 42 makes us do this just so we can ha
 
 ### What's in it?
 
-As you can see from the [Project instructions][1], there are 4 sections:
+As you can see from the [Project instructions][1] [(french)][0], there are 4 sections:
 
 1.  **Libc Functions:** Some of the standard C functions
 2.  **Additional functions:** Functions 42 deems will be useful for later projects
@@ -66,6 +66,7 @@ My code is not the best, but it passed all the 42 tests successfully.
 
 #### Partie 1  
 Consult man page for these functions :
+
 * ft_memset
 * ft_bzero  
 * ft_memcpy

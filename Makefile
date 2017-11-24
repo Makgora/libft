@@ -91,6 +91,7 @@ all: $(NAME)
 	@echo
 
 $(NAME): $(OBJS)
+	@echo
 	@echo "\033[1;34mLibft\t\t\033[1;33mMaking lib\t\033[0;32m[OK]\033[0m"
 	@echo
 	ar rc $@ $(OBJS)
@@ -101,7 +102,7 @@ $(NAME): $(OBJS)
 	@echo
 
 %.o: %.c
-	$(CC) $(CFLAGS) -I $(H) $< -o $@
+	$(CC) $(CFLAGS) $< -o $@ -iquote $(H)
 
 clean:
 	@echo
